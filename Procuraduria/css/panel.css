@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+.wrapper{
+  display: grid;
+  margin: 50px 50px auto;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  text-align: center;
+}
+
+.box:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
+
+.box:active{
+  transform: scale(0.99);
+    transition: 0.2s;
+}
+
+@media (max-width: 700px) {
+  .wrapper{
+    margin: 0 auto;
+    scale: 0.8;
+  }
+}
+.wrapper .box{
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.wrapper .box .front-face{
+  background: #fff;
+  height: 220px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  transition: all 0.5s ease;
+  border-radius: 15px;
+}
+.box .front-face .icon{
+  height: 80px;
+}
+.box .front-face .icon i{
+  font-size: 65px;
+}
+.box .front-face span,
+.box .back-face span{
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .front-face .icon i {
+  background: linear-gradient(-135deg, #D31027, #EA384D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box .front-face span{
+  background: #010101;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Procuraduría General del Estado Bolívar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+
+    <!-- Google Web Fonts -->
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-0">
+        <div class="row g-0 d-none d-lg-flex">
+            <div class="col-lg-6 ps-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center text-white">
+                    <span>Síguenos:</span>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link text-light" href="https://twitter.com/procubolivar"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-end">
+                <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
+                    <span class="fs-5 fw-bold me-2"><i class="fa fa-phone-alt me-2"></i>Contáctanos:</span>
+                    <span class="fs-5 fw-bold">0285 632 3531</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <?php require("layout/navbar.php") ?>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid px-0 mb-5">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/carousel-1.png" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10 text-start">
+                                    <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">Procuraduría General del Estado Bolívar</p>
+                                    <h1 class="display-1 text-white mb-5 animated slideInRight">Bienvenidos a nuestro Portal Web!</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-2.png" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10 text-start">
+                                    <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight"<p>Procuraduría General del Estado Bolívar</p>
+                                    <h1 class="display-1 text-white mb-5 animated slideInRight">Explora nuestro sitio</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="row gx-3 h-100">
+                        <div class="col-6 align-self-start wow fadeInUp" data-wow-delay="0.1s">
+                            <img class="img-fluid" src="img/about-1.png">
+                        </div>
+                        <div class="col-6 align-self-end wow fadeInDown" data-wow-delay="0.1s">
+                            <img class="img-fluid" src="img/about-2.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <p class="fw-medium text-uppercase text-primary mb-2">Cónoce más de nosotros..</p>
+                    <h1 class="display-5 mb-4">Nuestros Objetivos</h1>
+
+                        <div class="ms-4">
+                            <p style="text-align: justify;"><i class="fa fa-check text-primary me-2 text-justify"></i>Garantizar la seguridad
+                            jurídica de la actuación del estado, la defensa y protección de los derechos e intereses
+                        patrimoniales, mediante el cumplimiento del ordenamiento jurídico vigente.</p>
+                            <p style="text-align: justify;"><i class="fa fa-check text-primary me-2"></i>Fortalecer la inclusión social ofreciendo 
+                            servicios jurídico-sociales, a través de jornadas integrales en concordancia con lo establecido
+                        en las leyes vigentes.</p>
+                            <p style="text-align: justify;"><i class="fa fa-check text-primary me-2"></i>Medir continuamente la satisfacción de nuestros clientes, con la finalidad
+                            de tomar acciones orientadas a elevar los niveles de satisfacción.</p>
+                            <p style="text-align: justify;"><i class="fa fa-check text-primary me-2"></i>Mejorar continuamente la eficacia del Sistema de Gestión de la Calidad.</p>
+                            <p style="text-align: justify;"><i class="fa fa-check text-primary me-2"></i>Fortalecer de forma permanente el desarrollo del recurso humano.</p>
+                            <p style="text-align: justify;"><i class="fa fa-check text-primary me-2"></i>Garantizar la adecuación tecnológica y de infraestructura, así como la provisión
+                            así como la provisión de los recursos materiales necesarios para garantizar la calidad en el desempeño y buen funcionamiento de la institución.</p>
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-envelope-open text-white"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <p class="mb-2">Envíanos un Correo</p>
+                                    <h5 class="mb-0">procubolivar@gmail.com</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-phone-alt text-white"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <p class="mb-2">Llámanos</p>
+                                    <h5 class="mb-0">0285 632 3531</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Features Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative me-lg-4">
+                        <img class="img-fluid w-100" src="img/feature.png" alt="">
+                        <!-- <span
+                            class="position-absolute top-50 start-100 translate-middle bg-white rounded-circle d-none d-lg-block"
+                            style="width: 120px; height: 120px;"></span>
+                        <button type="button" class="btn-play" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                            <span></span>
+                        </button> -->
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <p class="fw-medium text-uppercase text-primary mb-2">Cónoce más de nosotros..</p>
+                    <h1 class="display-5 mb-4">Nuestros Valores</h1>
+                    <div class="row gy-4">
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <h4>Solidaridad</h4>
+                                    <span style="text-align: justify;">Espíritu de colaboración y firme compromiso para el alcance del bien común,
+                                        abarcando desde la más íntima necesidad hasta aquellas más irracionales en búsqueda de la 
+                                        solución más acertada.
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <h4>Honestidad</h4>
+                                    <span>Cualidad humana que consiste en comportarse y expresarse
+                                        con coherencia y 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <h4>Igualidad</h4>
+                                    <span>Crear un entorno favorable donde existen los mismos derechos, deberes y oportunidades
+                                        para todos, sin ningún tipo de discriminación.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <h4>Humanismo</h4>
+                                    <span>Crear un entorno favorable donde existen los mismos derechos, deberes y oportunidades
+                                        para todos, sin ningún tipo de discriminación.
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Features End -->
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="fw-medium text-uppercase text-primary mb-2">Cónoce más de nosotros..</p>
+                <h1 class="display-5 mb-4">Nuestros Lineamientos</h1>
+            </div>
+            <div class="row gy-5 gx-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/service-1.png" alt="">
+                        <div class="service-img">
+                            <img class="img-fluid" src="img/service-1.png" alt="">
+                        </div>
+                        <div class="service-detail">
+                            <div class="service-title">
+                                <hr class="w-25">
+                                <h3 class="mb-0">Misión</h3>
+                                <hr class="w-25">
+                            </div>
+                            <div class="service-text">
+                                <p style="text-align: justify; font-weight: bold; " class="text-white mb-0">Garantizar la seguridad jurídica de la actuación del estado, 
+                                    la defensa y protección de los derechos e intereses patrimoniales, mediante la aplicación 
+                                    honorable del conocimiento jurídico vigente, en su acción de asesoramiento al poder público 
+                                    estadal y de representación judicial y extrajudicial, a su vez, fortalecer la inclusión social 
+                                    ofreciendo servicios jurídico-sociales, a través de jornadas integrales en concordancia con lo 
+                                    establecido en las leyes vigentes.</p>
+                            </div>
+                        </div>
+                        <a class="btn btn-light" href="about.php">Leer Más</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/service-2.png" alt="">
+                        <div class="service-img">
+                            <img class="img-fluid" src="img/service-2.png" alt="">
+                        </div>
+                        <div class="service-detail">
+                            <div class="service-title">
+                                <hr class="w-25">
+                                <h3 class="mb-0">Visión</h3>
+                                <hr class="w-25">
+                            </div>
+                            <div class="service-text">
+                                <p style="text-align: justify; font-weight: bold;" class="text-white mb-0">	Ser el Órgano procurador de mayor reconocimiento, prestigio y credibilidad 
+                                    por su capacidad asesora al poder público estadal, y su eficiente acción en defensa y representación 
+                                    de los bienes e intereses patrimoniales del Estado Bolívar, mediante la aplicación del conocimiento 
+                                    científico de las ciencias jurídicas y la utilización objetiva y honorable del ordenamiento jurídico 
+                                    venezolano; además de alcanzar la mayor inclusión social logrando la participación de todos los ciudadanos.</p>
+                            </div>
+                        </div>
+                        <a class="btn btn-light" href="about.php">Leer Más</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/service-3.png" alt="">
+                        <div class="service-img">
+                            <img class="img-fluid" src="img/service-3.png" alt="">
+                        </div>
+                        <div class="service-detail">
+                            <div class="service-title">
+                                <hr class="w-50">
+                                <h3 class="mb-0">Política de la Calidad</h3>
+                                <hr class="w-50">
+                            </div>
+                            <div class="service-text">
+                                <p style="text-align: justify; font-weight: bold; " class="text-white mb-0">Es política de la calidad garantizar la seguridad jurídica 
+                                    de la actuación del estado, la defensa y protección de los derechos e intereses patromoniales,
+                                    mediante la aplicación honorable del conocimiento jurídico vigente, en su accción de asesoramiento
+                                    del poder público estadal y de representación judicial y extrajudicial.</p>
+                            </div>
+                        </div>
+                        <a class="btn btn-light" href="about.php">Leer Más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Footer Start -->
+    <?php require("layout/footer.php") ?>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-dark py-4">
+        <div class="container text-center">
+            <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="#">Procuraduría General del Estado Bolívar</a>, Todos los derechos reservados    .
+            </p>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
