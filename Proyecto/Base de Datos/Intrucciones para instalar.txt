@@ -1,0 +1,7 @@
+El nombre de la base de datos es: proyecto
+
+Usuario principal: moises
+Contraseña: 123456
+
+Usuario secundario: persona
+Contraseña: 123456

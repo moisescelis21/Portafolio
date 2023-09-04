@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+:root {
+    --font-size1: 12px;
+    --font-size2: 18px;
+    --font-size3: 20px;
+    --font-color: rgb(68, 68, 68);
+    --blank-color: #fff;
+    --active-color: rgb(0, 255, 200);
+    --primary-color: rgb(2, 46, 60);
+    --secondary-color: rgb(48, 145, 140);
+    --secondary-color2: rgb(15, 44, 43);
+    --third-color: rgb(232, 255, 22);
+    --input-select: rgba(0, 0, 0, 0.063);
+    --transition-05: all 0.5s ease;
+    --transition-03: all 0.3s ease;
+
+}
+
+/* TABLA */
+
+.container1{
+    
+    background-size: contain;
+}
+
+.container__section {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 70px);
+    box-sizing: border-box;
+    background-color: rgba(15, 44, 43, 0.393);
+
+}
+
+.container__section .header-tab{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(2, 60, 15, 0.671);
+    color: var(--blank-color);
+}
+
+.container__section .header-tab h2{
+    color: var(--blank-color);
+}
+
+.container__section i {
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 650px) {
+
+
+}

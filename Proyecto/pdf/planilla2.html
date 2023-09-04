@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            flex-direction: column;
+            font-family: sans-serif;
+            align-items: center;
+            width: auto;
+            margin: 0 50px;
+            border: 3px solid rgb(118, 117, 117);
+            border-radius: 50px;
+            height: 24cm;
+            padding: 20px;
+        }
+
+        .header-container {
+
+            border-radius: 20px;
+            gap: 5px;
+            width: 100%;
+            text-align: center;
+            font-size: 15px;
+            top: 20px;
+            background-color: #fff;
+            padding: 10px;
+            margin: 0 50px;
+        }
+
+        .header__container-text p {
+            font-size: 14px;
+            line-height: 1.5;
+
+        }
+
+        .header__container-text h2 {
+            font-size: 14px;
+            line-height: 1.5;
+            color: gray;
+        }
+
+        .header-img {
+            width: 120px;
+            background-color: #fff;
+            height: 50px;
+            margin: 5px 100px 10px 100px;
+            opacity: 0.7;
+
+        }
+
+        .info-container {
+            margin-top: 100px;
+            border: 3px solid rgb(118, 117, 117);
+            border-radius: 30px;
+            padding: 20px;
+            height: 21cm;
+        }
+
+
+
+        .info__container-p1 {
+            margin: 30px 40px 20px 40px;
+            font-weight: bold;
+        }
+
+        .info__container-p1 p {
+            display: inline;
+        }
+
+
+        .firmas {
+            width: 100%;
+
+            text-align: center;
+        }
+
+        .firmas hr {
+            margin: 40px 0 20px 0;
+            width: 200px;
+        }
+
+        .firmas hr {
+
+            margin: 30px auto 20px auto;
+            width: 200px;
+        }
+
+        .salto {
+            page-break-after: always;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* 2DA PAG */
+
+        .acta {
+            padding: 30px;
+        }
+
+        .acta h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .acta p {
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        table {
+            width: 90%;
+            border: 1px solid #000;
+            margin: 20px auto 20px auto;
+        }
+
+        th {
+            padding: 10px;
+            border: 1px solid #000;
+        }
+
+        tr:nth-child(1) {
+            background-color: rgb(188, 255, 255);
+            border: 1px solid #000;
+        }
+
+        .firmas2 {
+            width: 200px;
+            float: left;
+            margin-left: 50px;
+        }
+
+        .firmas2 p {
+            margin-bottom: 10px;
+        }
+
+        .firmas3 {
+            float: right;
+            width: 300px;;
+        }
+        .firmas3 p{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- 1ra PARTE -->
+        <header class="header-container">
+            <img class="header-img img1" src="img/gob.jpg" alt="">
+            <img class="header-img img2" src="img/alcal.jpg" alt="">
+            <div class="header__container-text">
+                <h2>REPUBLICA BOLIVARIANA DE VENEZUELA</h2>
+                <h2>ALCALDÍA DEL MUNICIPIO ANGOSTURA DEL ORINOCO</h2>
+                <h2>DIRECCIÓN DE SISTEMAS Y TECNOLOGÍA</h2>
+                <p><b>ENTREGA</b></p>
+                <p><b>DE:</b></p>
+                <p><b>A:</b></p>
+                <p><b>FECHA:</b></p>
+            </div>
+
+        </header>
+        <section>
+            <p>AQUÍ IRAN LAS IMÁGENES</p>
+        </section>
+        <div class="firmas">
+            <p>ENTREGA:</p>
+            <hr>
+            <p><b>YANIHOT LUGO</b></p>
+            <p>C.I: 30.385.423</p>
+            <p>Cargo: Coord. Telemática</p>
+        </div>
+    </div>
+
+    <hr class="salto">
+    <!-- 2da planilla -->
+
+    <div class="container">
+        <header class="header-container">
+            <img class="header-img img1" src="img/gob.jpg" alt="">
+            <img class="header-img img2" src="img/alcal.jpg" alt="">
+            <div class="header__container-text">
+                <h2>REPUBLICA BOLIVARIANA DE VENEZUELA</h2>
+                <h2>ALCALDÍA DEL MUNICIPIO ANGOSTURA DEL ORINOCO</h2>
+                <h2>DIRECCIÓN DE SISTEMAS Y TECNOLOGÍA</h2>
+            </div>
+
+        </header>
+
+        <div class="acta">
+            <h2>ACTA DE ENTREGA</h2>
+            <p>En el día de hoy 19/05/2021, siendo las 9:00 A.M. se elabora la presente Acta en la Dirección de Sistemas
+                y Tecnología, con la finalidad de dejar constancia de la entrega de un (01) CPU Genérico, Color Negro.
+            </p>
+            <table>
+                <tr>
+                    <th>Equipo</th>
+                    <th>Marca/Modelo</th>
+                    <th>Seral N°</th>
+                    <th>Serial de Bienes</th>
+                    <th>Color</th>
+                </tr>
+                <tr>
+                    <th>A</th>
+                    <th>A/A</th>
+                    <th>A N°</th>
+                    <th>A A A</th>
+                    <th>A</th>
+                </tr>
+            </table>
+            <p>Entrega que se hace a la <b>Dirección de Sindicatura</b> a los efectos de apoyo a las actividades de esa
+                Dirección, reiterándole mi más alta disposición y colaboración para el fortalecimiento de la gestión de
+                nuestro Alcalde Sergio Hernández.
+            </p>
+
+        </div>
+        <div class="firmas2">
+            <p>ENTREGA:</p>
+            <br>
+            <hr class="firmas2__hr">
+            <br>
+            <p><b>YANIHOT LUGO</b></p>
+            <p>C.I: 30.385.423</p>
+            <p>Cargo: Coord. Telemática</p>
+        </div>
+        <div class="firmas3">
+            <p>RECIBE:</p>
+            <p>______________________</p>
+            <p>Nombre y Apellido:</p>
+            <p>______________________</p>
+            <p>C.I: __________________</p>
+            <p>Teléfono: ______________</p>
+            <p>Cargo: ________________</p>
+            <p>Fecha: ________________</p>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

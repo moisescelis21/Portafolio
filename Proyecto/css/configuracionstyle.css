@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+:root {
+    --font-color: rgb(68, 68, 68);
+    --blank-color: #fff;
+    --active-color: rgb(0, 255, 200);
+    --primary-color: rgb(2, 46, 60);
+    --secondary-color: rgb(48, 145, 140);
+    --secondary-color2: rgb(15, 44, 43);
+    --third-color: rgb(232, 255, 22);
+    --transition-05: all 0.5s ease;
+    --transition-03: all 0.3s ease;
+}
+
+.configuration__section {
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    margin: auto;
+}
+
+.container__section-config {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+}
+
+.container__section-config a {
+    text-decoration: none;
+}
+
+.configuration__section-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--blank-color);
+    height: auto;
+    width: 100%;
+    height: 200px;
+    max-width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    padding-top: 10px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 1);
+    transition: transform .3s ease;
+}
+
+.configuration__section-item:hover {
+    transform: scale(1.1);
+}
+
+/* CONTENIDO DE ITEMS */
+
+.configuration__section-item h2 {
+    font-size: 1.1rem;
+    text-align: center;
+    color: rgb(230, 230, 230);
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 6px 8px;
+    
+    
+}
+
+.configuration__item-img {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.configuration__item-img img {
+    transform: scale(.9);
+    height: 90%;
+    width: 100%;
+    object-fit: contain;
+    transition: var(--transition-03);
+}
+.configuration__item-img:hover img {
+    transform: rotate(5deg);
+}
+
+@media screen and (max-width: 650px) {
+    .configuration__section {}
+    .configuration__section-item {
+        height: 150px;
+        max-width: 150px;
+    }
+
+    .configuration__section-item h2{
+        font-size: .9rem;
+    }
+
+}
