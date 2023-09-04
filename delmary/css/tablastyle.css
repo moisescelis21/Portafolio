@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+:root {
+    --font-size1: 12px;
+    --font-size2: 18px;
+    --font-size3: 20px;
+    --font-color: rgb(68, 68, 68);
+    --blank-color: #fff;
+    --active-color: rgb(0, 255, 200);
+    --primary-color: rgb(2, 46, 60);
+    --secondary-color: rgb(48, 145, 140);
+    --secondary-color2: rgb(15, 44, 43);
+    --third-color: rgb(232, 255, 22);
+    --input-select: rgba(0, 0, 0, 0.063);
+    --transition-05: all 0.5s ease;
+    --transition-03: all 0.3s ease;
+
+}
+
+.header__title{
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 10px 10px;
+    width: 200px;
+    color: rgb(2, 46, 60);
+    border-radius: 15px;
+}
+
+
+/* TABLA */
+
+.container__section {
+    padding: 40px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container__section .tools i {
+    font-size: 20px;
+}
+
+.datatable i{
+    font-size: 32px;
+}
+
+.container__section-table {
+    background-color: var(--blank-color);
+    color: var(--font-color);
+    width: 95%;
+    padding: 20px;
+    margin: auto;
+ 
+    box-sizing: border-box;
+    font-size: var(--font-size1);
+}
+
+.container__section-table .datatable {
+    width: 100%;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+
+.datatable td {
+    padding: 20px 5px !important;   
+}
+
+.datatable td:first-child {
+    padding: 20px 5px 20px 30px !important;
+}
+
+
+
+/* Header de tabla */
+
+.datatable-header {
+    display: flex;
+    align-items: baseline;
+    border-bottom: solid 1px var(--primary-color);
+    padding: 12px;
+    margin: 10px;
+}
+
+.datatable-header .tools {
+    width: 70%;
+}
+
+.datatable-header .tools ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+}
+
+.datatable-header .tools li {
+    display: inline;
+    text-transform: none;
+    align-items: baseline;
+}
+
+.datatable-header .tools ul li button a {
+    color: var(--blank-color);
+}
+
+.datatable-header .tools ul li button {
+    background-image: linear-gradient(to right, #4568DC 0%, #B06AB3  51%, #4568DC  100%);
+    margin: -30px -5%;
+    padding: 1px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    font-size: 10px;
+}
+
+.datatable-header .tools ul li button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+ 
+
+/* Botones */
+
+.edit,
+.drop,
+.pdfview {
+    border-radius: 5px;
+    color: var(--blank-color);
+    text-align: center;
+    padding: 5px;
+    margin: 2px;
+    font-weight: 550;
+
+}
+
+/* EDITAR */
+
+.edit {
+    background-color: rgba(0, 103, 213, 0.907);
+    color: var(--blank-color);
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(16, 123, 255, 0.5);
+    box-shadow: 0px 8px 20px 0px rgba(16, 123, 255, 0.5);
+    transition: var(--transition-03);
+}
+
+.edit:hover {
+    color: var(--blank-color);
+
+}
+
+.edit i{
+    font-size: 15px;
+}
+
+/* ELIMINAR */
+
+.drop {
+    background-color: rgb(255, 70, 70);
+    color: var(--blank-color);
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(255, 28, 85, 0.5);
+    box-shadow: 0px 8px 20px 0px rgba(255, 28, 85, 0.5);
+}
+
+.drop:hover {
+    color: #fff;
+    transform: scale(0.8);
+    transition: 0.3s;
+}
+
+
+
+.drop i{
+    font-size: 15px;
+}
+
+
+/* MOSTRAR PDF */
+
+.pdfview {
+    background-color: rgb(9, 130, 81);
+    color: var(--blank-color);
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(78, 255, 69, 0.5);
+    box-shadow: 0px 8px 20px 0px rgba(78, 255, 69, 0.5);
+    transition: var(--transition-03);
+}
+
+.pdfview:hover {
+    background-color: var(--secondary-color);
+    color: var(--blank-color);
+    -webkit-box-shadow: inset 0px 8px 20px 0px rgba(78, 255, 69, 0.5);
+    box-shadow: inset 0px 8px 20px 0px rgba(78, 255, 69, 0.5);
+}
+
+         
+
+    
+
+
+@media only screen and (max-width: 650px) {
+    .container__section-table {
+        width: 95%;
+        margin: auto
+    }
+
+    .datatable {
+        font-size: 14px;
+    }
+}
