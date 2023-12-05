@@ -2,7 +2,7 @@
 
 .wrapper{
   display: grid;
-  margin: 50px 50px auto;
+  margin: 10px 50px auto;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   text-align: center;
@@ -33,7 +33,7 @@
 
 .wrapper .box .front-face{
   background: #fff;
-  height: 220px;
+  height: 200px;
   width: 100%;
   display: flex;
   flex-direction: column;

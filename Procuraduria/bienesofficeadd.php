@@ -8,7 +8,7 @@ session_start();
 $cedula = $_SESSION['cedula'];
 $privilegio = $_SESSION['privilegio'];
 $roles = $_SESSION['roles'];
-if ($roles != 0 OR $privilegio != 0) {
+  if ($roles == 1 OR $roles == 2 OR $roles == 4 OR $roles == 8) {
     session_unset();
     session_destroy();
     echo "<body><script>Swal.fire({
@@ -41,7 +41,7 @@ if (!isset($_SESSION["cedula"])) {
   }
 })</script>";
 }else{
-  ?>
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -53,10 +53,8 @@ if (!isset($_SESSION["cedula"])) {
     <meta content="" name="description">
 
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="css/register_intranet3.css">
-    <link rel="stylesheet" href="icons/iconpack2/style.css">
+    <link rel="stylesheet" href="css/register_intranet4.css">
     <link rel="stylesheet" href="css/tablastyle.css">
-
     
     <!-- Libraries Stylesheet -->
     <link href="lib/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -99,112 +97,100 @@ if (!isset($_SESSION["cedula"])) {
         ?>
         <div class="text animated wow fadeInRight">Bienvenido <?php echo $nombres ?>!</div>
         <?php } ?>  
-        <a href="usuarios.php" class="button_back"><i class='bx bx-undo'></i>Regresar</a>
+        <a href="bienesg.php" class="button_back"><i class='bx bx-undo'></i>Regresar</a>
         <div class="container animated wow fadeIn">
             <div class="top"> 
-              <h1>Usuarios</h1>
+              <h1>Bienes Por Oficinas</h1>
             </div>
             <div class="space">
 
             </div>
+          <?php $ubicacion = $_GET['ubicacion']; ?>
             <!-- METE ITEMS AQUI -->
           <div class="contenido">
-            <form action="usuarios3.php" class="formulario" id="formulario" method="post" autocomplete="off">
-			<!-- Grupo: Teléfono -->
-			<div class="container-inputs" id="grupo__cedula">
-                    <label class="formulario__label" for="cedula">Cedula</label>
-                    <div class="form__inputs">
-                        <input type="cedula" name="cedula" id="cedula" class="cedula"
-                            placeholder="Introduzca Cedula...">
-                        <i class="icon-close-outline form__validacion-estado"></i>
-                    </div>
-                    <p class="form__validacion-error">Escriba una cedula válido.</p>
-                </div>
-            
-            <div class="container-inputs" id="grupo__password">
-                    <label class="formulario__label" for="password">Contraseña</label>
-                    <div class="form__inputs">
-                        <input type="password" name="password" id="password" class="password"
-                            placeholder="Introduzca su contraseña...">
-                        <i class="icon-close-outline form__validacion-estado"></i>
-                    </div>
-                    <p class="form__validacion-error">Su contraseña debe poseer de 4 a 16 caracteres.</p>
-                </div>
+            <form action="bienesofficeadd2.php" class="formulario" id="formulario" method="post" autocomplete="off" enctype="multipart/form-data">
+      <!-- Grupo: Usuario -->
 
+                 <div class="formulario__grupo" id="grupo__cantidad">
+        <label for="cantidad" class="formulario__label">Cantidad</label>
+        <div class="formulario__grupo-input">
+          <input type="text" class="formulario__input" name="cantidad" id="cantidad" class="cantidad" placeholder="Cantidad...">
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="form__validacion-error">Ingrese la cantidad.</p>
+                </div>
+                 <div class="formulario__grupo" id="grupo__descripcion">
+        <label for="descripcion" class="formulario__label">Descripcion</label>
+        <div class="formulario__grupo-input">
+          <input type="text" class="formulario__input" name="descripcion" id="descripcion" class="descripcion" placeholder="Descripcion...">
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="form__validacion-error">Ingrese la descripcion.</p>
+                </div>
+                 <div class="formulario__grupo" id="grupo__ubicacion">
+        <label for="ubicacion" class="formulario__label">Ubicacion</label>
+        <div class="formulario__grupo-input">
+          <select class="formulario__input" name="ubicacion" id="ubicacion" class="ubicacion">
             <?php 
-                        $sql="SELECT * FROM usuarios WHERE privilegio='0'";
+                        $conexion=mysqli_connect('localhost','root','','procuraduria');
+                        $sql="SELECT * FROM ubicaciones";
                         $result=mysqli_query($conexion,$sql);
-                        $row=mysqli_num_rows($result);            
-            ?>
-            <?php
-            if ($row == 0) {
-            ?>
-            <div class="container-inputs" id="grupo__privilegio">
-                    <label class="formulario__label" for="privilegio">Privilegio</label>
-                    <div class="form__inputs">
-                        <select name="privilegio" id="privilegio" class="privilegio">
-                            <option value="none" hidden selected>Nivel de Usuario</option>
-                            <option value="0">SuperUsuario</option>
-                            <option value="1">Administrador</option>
-                            <option value="2">Usuario</option>
-                        </select>
+
+                        while($mostrar=mysqli_fetch_array($result)){
+                            $id = $mostrar['id'];
+                            $nombre = $mostrar['nombre'];
+                         
+                            
+                        ?>
+                        <?php if ($id == $ubicacion) {
+                        ?>
+                        <option selected="" value="<?php echo $id ?>"><?php echo $nombre ?></option>
+                        <?php
+                        }else{ ?>
+                        <option value="<?php echo $id ?>"><?php echo $nombre ?></option>
+                      <?php
+                    }}
+                      ?>
+          </select>
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
-                    <p class="form__validacion-error">Seleccione alguna opción</p>
+                    <p class="form__validacion-error">Ingrese la ubicacion.</p>
                 </div>
-            <?php
-            }else{
-             ?>
-             <div class="container-inputs" id="grupo__privilegio">
-                    <label class="formulario__label" for="privilegio">Privilegio</label>
-                    <div class="form__inputs">
-                        <select name="privilegio" id="privilegio" class="privilegio">
-                            <option value="none" hidden selected>Nivel de Usuario</option>
-                            <option value="1">Administrador</option>
-                            <option value="2">Usuario</option>
-                        </select>
+                 <div class="formulario__grupo" id="grupo__precio">
+        <label for="precio" class="formulario__label">Valor Unitario</label>
+        <div class="formulario__grupo-input">
+          <input type="text" class="formulario__input" name="precio" id="precio" class="precio" placeholder="Valor Unitario...">
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
-                    <p class="form__validacion-error">Seleccione alguna opción</p>
+                    <p class="form__validacion-error">Ingrese el valor unitario.</p>
                 </div>
-            <?php
-            }
-             ?>
-
-
-                <div class="container-inputs" id="grupo__roles">
-                    <label class="formulario__label" for="roles">Roles</label>
-                    <div class="form__inputs">
-                    <select class="formulario__input" name="roles" id="roles">
-                        <option value="none" hidden selected>Roles</option>
-						<option value="0">Todos los  permisos</option>
-						<option value="1">Nomina</option>
-						<option value="2">Noticias</option>
-						<option value="3">Archivos Importantes</option>
-						<option value="4">Nomina y Noticias</option>
-						<option value="5">Nomina, Noticias y Archivos</option>
-						<option value="6">Noticias y Archivos</option>
-						<option value="7">Nomina y Archivos</option>
-                        <option value="9">Bienes y Archivos</option>
-						<option value="8">Recibos y Constancia</option>
-
-					</select>
+                 <div class="formulario__grupo" id="grupo__titulo">
+        <label for="observacion" class="formulario__label">Observacion</label>
+        <div class="formulario__grupo-input">
+          <input type="text" class="formulario__input" name="observacion" id="observacion" class="observacion" placeholder="Observacion...">
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
-                    <p class="form__validacion-error">Seleccione alguna opción</p>
+                    <p class="form__validacion-error">Ingrese la observacion.</p>
                 </div>
+                <input type="hidden" name="ubicacion2" id="ubicacion2" value="<?php echo $ubicacion ?>">
 
 
 
 
-			</div>
+      
 
-			<div class="formulario__mensaje" id="formulario__mensaje">
-				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
-			</div>
 
-			<div class="formulario__grupo formulario__grupo-btn-enviar" style="margin-top: -3%;">
-				<button type="submit" name="login" id="login" type="button" value="Registrar" class="formulario__btn">Enviar</button>
-				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
-			</div>
-		</form>
+
+      <div class="formulario__mensaje" id="formulario__mensaje">
+        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+      </div>
+
+      <div class="formulario__grupo formulario__grupo-btn-enviar" style="margin-top: 6%;">
+        <button type="submit" name="login" id="login" type="button" value="Registrar" class="formulario__btn">Enviar</button>
+        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+      </div>
+            <input type="hidden" name="cedula" id="cedula" value="<?php echo $cedula; ?>">
+    </form>
                
           </div>
 
@@ -217,7 +203,7 @@ if (!isset($_SESSION["cedula"])) {
         <!-- Content End -->
 
         <!-- Script Start -->
-    <script>
+       <script>
         const body = document.querySelector('body'),
       sidebar = body.querySelector('nav'),
       toggle = body.querySelector(".toggle"),
@@ -243,6 +229,7 @@ modeSwitch.addEventListener("click" , () =>{
     </script>
         <!-- Script End -->
 
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -251,13 +238,12 @@ modeSwitch.addEventListener("click" , () =>{
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
-    
 
     <!-- Javascript -->
     <script src="js/main.js"></script>
-    <script src="js/validacionesFormularios/formulariousuario.js"></script>
-
+   
 </body>
 
 </html>
+
 <?php } ?>

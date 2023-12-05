@@ -101,38 +101,48 @@ if (!isset($_SESSION["cedula"])) {
 
         <div class="container animated wow fadeIn">
             <div class="top"> 
-              <h1>Modulos de Bienes - Archivo</h1>
+              <h1>Modulo de Bienes Por Oficinas</h1>
             </div>
             <div class="space">
 
             </div>
 
-
+            
             <div class="wrapper">
-              <a href="bienes2.php">
+              <?php 
+                        $conexion=mysqli_connect('localhost','root','','procuraduria');
+                        $sql="SELECT * FROM ubicaciones";
+                        $result=mysqli_query($conexion,$sql);
+
+                        while($mostrar=mysqli_fetch_array($result)){
+                            $id = $mostrar['id'];
+                            $nombre = $mostrar['nombre'];
+                            $pertenece = $mostrar['pertenece'];
+                         
+                            
+                        ?>
+
+
+
+             <?php if ($pertenece <= 0) {
+              ?>
+              <a href="bienesoffice.php?id=<?php echo $id ?>">
                 <div class="box">
             <div class="front-face">
                <div class="icon">
                <i class="fas fa-users"></i>
                </div>
-               <span>Bienes</span>
+               <span><?php echo $nombre ?></span>
             </div>
          </div>
             </a>
 
-            <a href="municipios.php">
-                <div class="box">
-            <div class="front-face">
-               <div class="icon">
-               <i class="fas fa-users"></i>
-               </div>
-               <span>Archivos</span>
-            </div>
-         </div>
-            </a>
+    
+            
+          <?php }} ?>
             
       </div>
-
+      
             <!-- METE ITEMS AQUI -->
 
  

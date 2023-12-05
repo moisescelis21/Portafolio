@@ -101,7 +101,7 @@ if (!isset($_SESSION["cedula"])) {
 
         <div class="container animated wow fadeIn">
             <div class="top"> 
-              <h1>Modulos de Bienes - Archivo</h1>
+              <h1>Modulos de Bienes</h1>
             </div>
             <div class="space">
 
@@ -109,30 +109,41 @@ if (!isset($_SESSION["cedula"])) {
 
 
             <div class="wrapper">
-              <a href="bienes2.php">
+              <a href="bienesg.php">
                 <div class="box">
             <div class="front-face">
                <div class="icon">
                <i class="fas fa-users"></i>
                </div>
-               <span>Bienes</span>
+               <span>Bienes Generales</span>
             </div>
          </div>
             </a>
 
-            <a href="municipios.php">
+            <a href="bienes3.php">
                 <div class="box">
             <div class="front-face">
                <div class="icon">
                <i class="fas fa-users"></i>
                </div>
-               <span>Archivos</span>
+               <span>Bienes por Oficinas</span>
+            </div>
+         </div>
+            </a>
+
+            <a href="bienesubi.php">
+                <div class="box">
+            <div class="front-face">
+               <div class="icon">
+               <i class="fas fa-users"></i>
+               </div>
+               <span>Ubicaciones</span>
             </div>
          </div>
             </a>
             
       </div>
-
+      
             <!-- METE ITEMS AQUI -->
 
  
