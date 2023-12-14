@@ -98,6 +98,70 @@
 
     </nav>
         <!-- Sidebar End -->
+<?php }elseif ($roles == "9") {
+        ?>
+        <div class="menu-bar">
+            <div class="menu">
+
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="intranet_start.php">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Inicio</span>
+                        </a>
+                    </li>
+
+                   <li class="nav-link">
+                        <a href="documentos.php">
+                        <i class='bx bx-receipt icon'></i>
+                            <span class="text nav-text">Documentos</span>
+                        </a>
+                    </li>
+  
+                     <li class="nav-link">
+                        <a href="bienes.php">
+                        <i class='bx bx-archive-in icon'></i>
+                            <span class="text nav-text">Archivos - Bienes</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="perfilusuario.php">
+                        <i class='bx bx-user-circle icon'></i>
+                            <span class="text nav-text">Perfil de Usuario</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="logout.php">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Cerrar Sesión</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text" style="font-size: 15px;">Modo Oscuro</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+        <!-- Sidebar End -->
 <?php }elseif ($roles == "7") {
         ?>
         <div class="menu-bar">
@@ -134,7 +198,7 @@
                   <li class="nav-link">
                         <a href="prensa.php">
                         <i class='bx bx-news icon'></i>
-                            <span class="text nav-text">Relaciones Publicas</span>
+                            <span class="text nav-text">RRPP</span>
                         </a>
                     </li>
 
@@ -204,7 +268,7 @@
                    <li class="nav-link">
                         <a href="prensa.php">
                         <i class='bx bx-news icon'></i>
-                            <span class="text nav-text">Relaciones Publicas</span>
+                            <span class="text nav-text">RRPP</span>
                         </a>
                     </li>
 
@@ -280,7 +344,7 @@
                    <li class="nav-link">
                         <a href="prensa.php">
                         <i class='bx bx-news icon'></i>
-                            <span class="text nav-text">Relaciones Publicas</span>
+                            <span class="text nav-text">RRPP</span>
                         </a>
                     </li>
 
@@ -350,7 +414,7 @@
                     <li class="nav-link">
                         <a href="prensa.php">
                         <i class='bx bx-news icon'></i>
-                            <span class="text nav-text">Relaciones Publicas</span>
+                            <span class="text nav-text">RRPP</span>
                         </a>
                     </li>
 
@@ -418,7 +482,7 @@
                     <li class="nav-link">
                         <a href="prensa.php">
                         <i class='bx bx-news icon'></i>
-                            <span class="text nav-text">Relaciones Publicas</span>
+                            <span class="text nav-text">RRPP</span>
                         </a>
                     </li>
 
@@ -481,7 +545,7 @@
                     <li class="nav-link">
                         <a href="prensa.php">
                         <i class='bx bx-news icon'></i>
-                            <span class="text nav-text">Relaciones Publicas</span>
+                            <span class="text nav-text">RRPP</span>
                         </a>
                     </li>
 
@@ -616,7 +680,7 @@
                     <li class="nav-link">
                         <a href="prensa.php">
                         <i class='bx bx-news icon'></i>
-                            <span class="text nav-text">Relaciones Publicas</span>
+                            <span class="text nav-text">RRPP</span>
                         </a>
                     </li>
 

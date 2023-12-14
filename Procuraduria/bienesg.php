@@ -8,7 +8,7 @@ session_start();
 $cedula = $_SESSION['cedula'];
 $privilegio = $_SESSION['privilegio'];
 $roles = $_SESSION['roles'];
-if ($roles != 0 OR $privilegio != 0) {
+  if ($roles == 1 OR $roles == 2 OR $roles == 4 OR $roles == 8) {
     session_unset();
     session_destroy();
     echo "<body><script>Swal.fire({
@@ -41,12 +41,12 @@ if (!isset($_SESSION["cedula"])) {
   }
 })</script>";
 }else{
-  ?>
+?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>INTRANET | Inicio</title> 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -60,6 +60,7 @@ if (!isset($_SESSION["cedula"])) {
     <link href="lib/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/boxicons/css/boxicons.min.css" rel="stylesheet">
 
     <script src="lib/datatables/datatables.js"></script>
     <link href="lib/datatables/DataTables-1.11.3/css/dataTables.jqueryui.min.css" rel="stylesheet">
@@ -71,10 +72,8 @@ if (!isset($_SESSION["cedula"])) {
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="img/favicon.svg">
 </head>
-
-
 <body>
-
+  
         <!-- Sidebar Start -->
         
         <?php require('./layout/sidebar.php') ?>
@@ -100,14 +99,12 @@ if (!isset($_SESSION["cedula"])) {
         <?php }else{ 
         ?>
         <div class="text animated wow fadeInRight">Bienvenido <?php echo $nombres ?>!</div>
-        <?php } ?>            
+        <?php } ?>  
         
-        
- 
 
         <div class="container animated wow fadeIn">
             <div class="top"> 
-              <h1>Usuarios</h1>
+              <h1>Bienes Generales</h1>
             </div>
             <div class="space">
             </div>
@@ -119,8 +116,14 @@ if (!isset($_SESSION["cedula"])) {
                                                 <div class="tools">
                                                     <ul>
                                                         <li>
-                                                            <a data-tooltip="Agregar Nuevo" href="usuarios2.php" style="text-decoration: none;"><button  class="buttontable" role="button"><i class='bx bxs-plus-square' style="font-size: 20px;"></i></button></a>
+                                                            <a data-tooltip="Agregar Nuevo" href="bienesgadd.php" style="text-decoration: none;"><button  class="buttontable" role="button"><i class='bx bxs-plus-square' style="font-size: 20px;"></i></button></a>
 
+
+                            
+                                                        </li>
+                                                        <li style="margin-left: 10px">
+                                                            <a data-tooltip="Descargar" href="bienesgdown.php" style="text-decoration: none;"><button  class="buttontable" role="button"><i class='bx bxs-cloud-download' style="font-size: 20px;"></i></button></a>
+                                                            
 
                             
                                                         </li>
@@ -129,88 +132,74 @@ if (!isset($_SESSION["cedula"])) {
                                             </div>
                 <thead>
                     <tr>
-                        <th>Usuario</th>
-                        <th>Privilegio</th>
-                        <th>Roles</th>
-                        <th>Acción</th>
+                        <th>Codificacion</th>
+                        <th>Numero</th>
+                        <th>Cantidad</th>
+                        <th>Descripcion</th>
+                        <th>Ubicacion</th>
+                        <th>Precio</th>
+                        <th>Observaciones</th>
+                        <th>Acciones</th>
+
     
                     </tr>
                 </thead>
                 <tbody class="table_body" style="text-align: center;">
                 <?php 
-
-                        $sql="SELECT * FROM usuarios";
+                        $conexion=mysqli_connect('localhost','root','','procuraduria');
+                        $sql="SELECT * FROM bienes";
                         $result=mysqli_query($conexion,$sql);
 
                         while($mostrar=mysqli_fetch_array($result)){
                             $id = $mostrar['id'];
-                            $cedula2 = $mostrar['cedula'];
-                            $privilegio2 = $mostrar['privilegio'];
-                            $roles2 = $mostrar['roles'];
+                            if ($mostrar['numero'] != "") {
+                            $ubicacion = $mostrar['ubicacion'];
+                         
                             
                         ?>
                     <tr>
-                        <td><?php echo $mostrar['cedula']; ?></td>
-                        <?php if ($privilegio2 == 0) {
-                        ?>
-                        <td>SuperUsuario</td>
-                        <?php } ?>
+                        <td><?php echo $mostrar['grupo']; ?>-<?php echo $mostrar['sgrupo']; ?>-<?php echo $mostrar['año']; ?></td>
+                        <td><?php echo $mostrar['numero']; ?></td>
+                        <td><?php echo $mostrar['cantidad'];; ?></td>
+                        <td><?php echo $mostrar['descripcion']; ?></td>
+                         <?php 
+                        $conexion=mysqli_connect('localhost','root','','procuraduria');
+                        $sql2="SELECT * FROM ubicaciones WHERE id='$ubicacion'";
+                        $result2=mysqli_query($conexion,$sql2);
+                        while($mostrar2=mysqli_fetch_array($result2)){
+                            $id2 = $mostrar2['id'];
+                            $nombre = $mostrar2['nombre'];
+                        ?> 
+                        <td style="" align="center"><?php echo $nombre; ?></td>
 
-                        <?php if ($privilegio2 == 1) {
-                        ?>
-                        <td>Administrador</td>
-                        <?php } ?>
 
-                        <?php if ($privilegio2 == 2) {
-                        ?>
-                        <td>Usuario</td>
-                        <?php } ?>
-
-                    
-                        <?php if($roles2 == 0){ ?>
-                        <td>Todos los Permisos</td>
-                        <?php } ?>
-                        <?php if($roles2 == 1){ ?>
-                        <td>Nomina</td>
-                        <?php } ?>
-                        <?php if($roles2 == 2){ ?>
-                        <td>Noticias</td>
-                        <?php } ?>
-                        <?php if($roles2 == 3){ ?>
-                        <td>Archivos Importantes</td>
-                        <?php } ?>
-                        <?php if($roles2 == 4){ ?>
-                        <td>Nomina y Noticias</td>
-                        <?php } ?>
-                        <?php if($roles2 == 5){ ?>
-                        <td>Nomina, Noticias y Archivos</td>
-                        <?php } ?>
-                        <?php if($roles2 == 6){ ?>
-                        <td>Noticias y Archivos</td>
-                        <?php } ?>
-                        <?php if($roles2 == 7){ ?>
-                        <td>Nomina y Archivos</td>
-                        <?php } ?>
-                        <?php if($roles2 == 9){ ?>
-                        <td>Bienes y Archivos</td>
-                        <?php } ?>
-                        <?php if($roles2 == 8){ ?>
-                        <td>Recibos y Constancia</td>
-                        <?php } ?>
-
+                    <?php } ?>
+                    <?php if ($ubicacion == "") {
+                    ?>
+                    <td style="" align="center"></td>
+                   <?php } ?>
+                        <td><?php echo number_format($mostrar['precio'],2); ?></td>
+                        <td><?php echo $mostrar['observacion']; ?></td>
                         <td>
-                            <?php echo "<button  class='buttontable edit' role='button'><a href='usuariosedit.php?id=$id' class=''><i class='bx bx-edit-alt'></i></button>"; ?>
-  
-                            <?php echo "<button data-tooltip='Eliminar Usuario' class='buttontable delete' role='button'><a href='usuariosdelete.php?id=$id' class=''><i class='bx bx-trash'></i></button>"; ?>
+                             <?php if ($privilegio == "1" OR $privilegio == "0") {
+                            ?>
+                            <?php echo "<button  class='buttontable edit' role='button'><a href='bienesgedit.php?id=$id' class=''><i class='bx bx-edit-alt'></i></button>"; ?>
+                            <?php echo "<button  class='buttontable delete' role='button'><a href='bienesgdelete.php?id=$id' class=''><i class='bx bx-trash'></i></button>"; ?>
+                        
+                        <?php }else{ ?>
+                            <?php echo "<button  class='buttontable edit' role='button'><a href='bienesgedit.php?id=$id' class=''><i class='bx bx-edit-alt'></i></button>"; ?>
+
+                        <?php } ?>
+
                         </td>
     
-                    <?php } ?>
-  
+                    <?php }} ?>
                     </tr>
                 </tbody>
             </table>
             </div>
             </div>
+
             <!-- METE ITEMS AQUI -->
                 <!-- TABLA DE DATOS -->
 
@@ -251,7 +240,6 @@ modeSwitch.addEventListener("click" , () =>{
         <!-- Script End -->
 
 
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -260,7 +248,7 @@ modeSwitch.addEventListener("click" , () =>{
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
-    
+
     <!-- Javascript Datatables -->
     <script type="text/javascript" src="libs/datatables/Scroller-2.0.7/js/dataTables.scroller.min.js"></script>
     <script src="js/table.js"></script>
@@ -270,4 +258,6 @@ modeSwitch.addEventListener("click" , () =>{
 </body>
 
 </html>
+
+
 <?php } ?>

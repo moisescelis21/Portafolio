@@ -196,6 +196,7 @@ if (!isset($_SESSION["cedula"])) {
                         <option value="5">Nomina, Noticias y Archivos</option>
                         <option value="6">Noticias y Archivos</option>
                         <option value="7">Nomina y Archivos</option>
+                        <option value="9">Bienes y Archivos</option>
                         <option value="8">Recibos y Constancia</option>
                         <?php } ?>
                         <?php if($roles2 == 1){ ?>
@@ -207,6 +208,7 @@ if (!isset($_SESSION["cedula"])) {
                         <option value="5">Nomina, Noticias y Archivos</option>
                         <option value="6">Noticias y Archivos</option>
                         <option value="7">Nomina y Archivos</option>
+                        <option value="9">Bienes y Archivos</option>
                         <option value="8">Recibos y Constancia</option>
                         <?php } ?>
                         <?php if($roles2 == 2){ ?>
@@ -218,6 +220,7 @@ if (!isset($_SESSION["cedula"])) {
                         <option value="5">Nomina, Noticias y Archivos</option>
                         <option value="6">Noticias y Archivos</option>
                         <option value="7">Nomina y Archivos</option>
+                        <option value="9">Bienes y Archivos</option>
                         <option value="8">Recibos y Constancia</option>
                         <?php } ?>
                         <?php if($roles2 == 3){ ?>
@@ -229,6 +232,7 @@ if (!isset($_SESSION["cedula"])) {
                         <option value="5">Nomina, Noticias y Archivos</option>
                         <option value="6">Noticias y Archivos</option>
                         <option value="7">Nomina y Archivos</option>
+                        <option value="9">Bienes y Archivos</option>
                         <option value="8">Recibos y Constancia</option>
                         <?php } ?>
                         <?php if($roles2 == 4){ ?>
@@ -240,6 +244,7 @@ if (!isset($_SESSION["cedula"])) {
                         <option value="5">Nomina, Noticias y Archivos</option>
                         <option value="6">Noticias y Archivos</option>
                         <option value="7">Nomina y Archivos</option>
+                        <option value="9">Bienes y Archivos</option>
                         <option value="8">Recibos y Constancia</option>
                         <?php } ?>
                         <?php if($roles2 == 5){ ?>
@@ -251,6 +256,7 @@ if (!isset($_SESSION["cedula"])) {
                         <option value="5" selected="">Nomina, Noticias y Archivos</option>
                         <option value="6">Noticias y Archivos</option>
                         <option value="7">Nomina y Archivos</option>
+                        <option value="9">Bienes y Archivos</option>
                         <option value="8">Recibos y Constancia</option>
                         <?php } ?>
                         <?php if($roles2 == 6){ ?>
@@ -262,6 +268,7 @@ if (!isset($_SESSION["cedula"])) {
                         <option value="5">Nomina, Noticias y Archivos</option>
                         <option value="6" selected="">Noticias y Archivos</option>
                         <option value="7">Nomina y Archivos</option>
+                        <option value="9">Bienes y Archivos</option>
                         <option value="8">Recibos y Constancia</option>
                         <?php } ?>
                         <?php if($roles2 == 7){ ?>
@@ -273,6 +280,19 @@ if (!isset($_SESSION["cedula"])) {
                         <option value="5">Nomina, Noticias y Archivos</option>
                         <option value="6">Noticias y Archivos</option>
                         <option value="7" selected="">Nomina y Archivos</option>
+                        <option value="9">Bienes y Archivos</option>
+                        <option value="8">Recibos y Constancia</option>
+                        <?php } ?>
+                        <?php if($roles2 == 9){ ?>
+                        <option value="0" >Todos los  permisos</option>
+                        <option value="1">Nomina</option>
+                        <option value="2">Noticias</option>
+                        <option value="3">Archivos Importantes</option>
+                        <option value="4">Nomina y Noticias</option>
+                        <option value="5">Nomina, Noticias y Archivos</option>
+                        <option value="6">Noticias y Archivos</option>
+                        <option value="7">Nomina y Archivos</option>
+                        <option value="9" selected="">Bienes y Archivos</option>
                         <option value="8">Recibos y Constancia</option>
                         <?php } ?>
                         <?php if($roles2 == 8){ ?>
@@ -284,6 +304,7 @@ if (!isset($_SESSION["cedula"])) {
                         <option value="5">Nomina, Noticias y Archivos</option>
                         <option value="6">Noticias y Archivos</option>
                         <option value="7">Nomina y Archivos</option>
+                        <option value="9">Bienes y Archivos</option>
                         <option value="8" selected="">Recibos y Constancia</option>
                         <?php } ?>
 						
