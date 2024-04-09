@@ -1,0 +1,1 @@
+Subir la carpeta leadbox al servidor local (xampp, lamp, entre otros) y entrar al link localhost/leadbox
